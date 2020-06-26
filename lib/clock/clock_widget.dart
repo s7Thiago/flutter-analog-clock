@@ -31,7 +31,7 @@ class _ClockWidgetState extends State<ClockWidget> {
   Widget build(BuildContext context) {
     return Center(
       child: CustomPaint(
-        size: Size.square(300),
+        size: Size.square(350),
         painter: ClockPaint(),
       ),
     );
