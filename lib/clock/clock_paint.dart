@@ -60,6 +60,12 @@ class ClockPaint extends CustomPainter {
     final center = Offset(centerX, centerY);
     final radius = centerX;
 
+    // Define a funcionalidade do relogio
+    final now = DateTime.now();
+    final hourDegree = (360 / 12) * now.hour; // Calculando a hora
+    final minuteDegree = (360 / 60) * now.minute; // Calculando a hora
+    final secondDegree = (360 / 60) * now.second; // Calculando a hora
+
 // Desenhando o arco mais externo
     canvas.drawArc(
       Rect.fromCenter(
@@ -82,7 +88,7 @@ class ClockPaint extends CustomPainter {
 
     // Desenhando o ponteiro dos minutos
     final _minutesLineWidth = radius / 1.25;
-    final _minutesLineRadians = degreeToRadians(60);
+    final _minutesLineRadians = degreeToRadians(minuteDegree);
     canvas.drawLine(
       Offset(
         centerX + cos(_minutesLineRadians) * _minutesLineWidth,
@@ -92,13 +98,13 @@ class ClockPaint extends CustomPainter {
       _minutesLine,
     );
 
-    // Desenhando o ponteiro dos minutos
-    final _hourssLineWidth = radius / 2;
-    final _hoursLineRadians = degreeToRadians(300);
+    // Desenhando o ponteiro das horas
+    final _hoursLineWidth = radius / 2;
+    final _hoursLineRadians = degreeToRadians(hourDegree);
     canvas.drawLine(
       Offset(
-        centerX + cos(_hoursLineRadians) * _hourssLineWidth,
-        centerX + sin(_hoursLineRadians) * _hourssLineWidth,
+        centerX + cos(_hoursLineRadians) * _hoursLineWidth,
+        centerX + sin(_hoursLineRadians) * _hoursLineWidth,
       ),
       center,
       _hoursLine,
@@ -106,7 +112,7 @@ class ClockPaint extends CustomPainter {
 
     // Desenhando o ponteiro dos segundos
     final _secondsLineWidth = radius / 1.25;
-    final _secondsLineRadians = degreeToRadians(180);
+    final _secondsLineRadians = degreeToRadians(secondDegree);
     canvas.drawLine(
       Offset(
         centerX + cos(_secondsLineRadians) * _secondsLineWidth,
