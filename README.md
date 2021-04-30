@@ -1,16 +1,29 @@
-# flutter_analog_clock
+# # Outlook App Redesign
 
-A new Flutter project.
+A simple analog clock built with custom paint in Flutter. I used some simple math concepts like sine, cosine and radians to controll the painters positions and rotation.
 
-## Getting Started
+## Project Status
 
-This project is a starting point for a Flutter application.
+This project is just a personal showcase, done with de aim of register what i have studied, and show my skills. It may receives improvements in the future.
 
-A few resources to get you started if this is your first Flutter project:
+## Project Screen Shot
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+| Clock               |
+| ------------------- |
+| ![](assets/app.gif) |
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation and Setup Instructions
+
+Clone down this repository. You will need `Flutter` and `Dart` installed globally on your machine.
+
+Installation:
+
+`flutter pub get install` on the project root.
+
+To Run the android application:
+
+`flutter run -d <device or emulator id>`
+
+To build a android release:
+
+`flutter build apk` the package will be generated on **./build/app/outputs/flutter-apk/app-release.apk**
