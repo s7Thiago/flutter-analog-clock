@@ -1,4 +1,4 @@
-# # Outlook App Redesign
+# # Flutter Analog Clock
 
 A simple analog clock built with custom paint in Flutter. I used some simple math concepts like sine, cosine and radians to controll the painters positions and rotation.
 
